@@ -1,0 +1,90 @@
+{
+  "name": "sp-rpg",
+  "description": "An RPG bot for SimplePlanes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aceheliflyer",
+    "email": "aceheliflyer@gmail.com",
+    "url": "http://aceheliflyer.github.io"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:shard": "node sharder.js",
+    "start:dev": "nodemon index.js",
+    "start:dev-shard": "nodemon sharder.js",
+    "install:dev": "npm i --only=dev",
+    "lint:all": "standard --verbose | snazzy && markdownlint *",
+    "lint:js": "standard --verbose | snazzy",
+    "lint:js-fix": "standard --verbose --fix | snazzy",
+    "lint:md": "markdownlint *",
+    "commitmsg": "commitplease .git/COMMIT_EDITMSG",
+    "precommit": "npm run lint:js",
+    "prepush": "npm run lint:js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+http://github.com/ThatGuyChrisZ/Sp-RPG.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "discord.js",
+    "discord.js-commando"
+  ],
+  "bugs": {
+    "url": "http://github.com/ThatGuyChrisZ/Sp-RPG/issues"
+  },
+  "homepage": "http://github.com/ThatGuyChrisZ/Sp-RPG#readme",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "common-tags": "^1.7.2",
+    "discord.js": "github:hydrabolt/discord.js",
+    "discord.js-commando": "github:gawdl3y/discord.js-commando",
+    "js-yaml": "^3.11.0",
+    "request": "^2.83.0",
+    "sqlite": "^2.9.1",
+  },
+  "devDependencies": {
+    "commitplease": "^3.2.0",
+    "husky": "^0.14.3",
+    "markdownlint": "^0.7.0",
+    "nodemon": "^1.17.1",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=8.4.0",
+    "npm": ">=5.3.0"
+  },
+  "commitplease": {
+    "style": "jquery",
+    "component": true,
+    "components": [
+      "Assets",
+      "ClientEvents",
+      "Commands",
+      "Comments",
+      "Config",
+      "Core",
+      "Docs",
+      "Events",
+      "Feature",
+      "Fix",
+      "Index",
+      "Lint",
+      "Package",
+      "Packages",
+      "ProcessEvents",
+      "Release",
+      "Support",
+
+    ],
+    "limits": {
+      "firstLine": "72",
+      "otherLine": "80"
+    },
+    "nohook": true
+  }
+}
